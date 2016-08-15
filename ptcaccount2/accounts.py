@@ -121,6 +121,8 @@ def create_account(username, password, email, birthday):
     driver.get("{}/sign-up/".format(BASE_URL))
     assert driver.current_url == "{}/sign-up/".format(BASE_URL)
     elem = driver.find_element_by_name("dob")
+    driver.execute_script("var a = arguments[0]; a.parentNode.replaceChild(a.cloneNode(), a);", elem)
+    elem = driver.find_element_by_name("dob")
     driver.execute_script("arguments[0].removeAttribute('readonly')", elem)
     elem.clear()
     elem.send_keys(birthday)
