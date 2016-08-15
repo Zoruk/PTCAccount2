@@ -12,7 +12,7 @@ OSX Installation: `brew install chromedriver`
 
 Once ChromeDriver is installed, install PTCAccount2 from Github using pip:
 
-`pip install git+https://github.com/Kitryn/PTCAccount2.git`
+`pip install git+https://github.com/Zoruk/PTCAccount2.git`
 
 ## Use
 
